@@ -1,4 +1,3 @@
-
 const fsPromises = require('fs/promises');
 const path = require('path');
 const folderPath = path.join(__dirname, 'secret-folder');
@@ -6,7 +5,7 @@ const folderPath = path.join(__dirname, 'secret-folder');
 fsPromises
   .readdir(folderPath)
   .then((files) => {
-    files.forEach(async (file)=> {
+    files.forEach(async (file) => {
       const filePath = path.join(folderPath, file);
       const fileStat = await fsPromises.stat(filePath);
       if (fileStat.isFile()) {

@@ -14,10 +14,9 @@ stdin.on('data', (data) => {
   } else {
     fs.appendFile(path.join(__dirname, 'text.txt'), text, (error) => {
       if (error) console.error(error.message);
-      console.log('>Text file created')
-    });
+      console.log('>Text file created');
   }
-})
+});
 
 process.on('exit', () => {
   stdout.write('GoodBye!');
