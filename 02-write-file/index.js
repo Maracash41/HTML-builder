@@ -15,6 +15,7 @@ stdin.on('data', (data) => {
     fs.appendFile(path.join(__dirname, 'text.txt'), text, (error) => {
       if (error) console.error(error.message);
       console.log('>Text file created');
+  });
   }
 });
 
